@@ -1,0 +1,140 @@
+/* Small Devices, Tablets */
+@media only screen and (max-width : 1100px)
+  .catalog
+    &__item
+      flex-basis: 50%
+  .card
+    &:hover
+      margin-top: 0
+      margin-bottom: 20px
+@media only screen and (max-width : 750px)
+  .post-article
+    padding: 10px
+    &__text
+      display: none
+    &__icon
+      display: block
+  .catalog
+    &__item
+      flex-basis: 100%
+@media only screen and (max-width : 570px)
+  .card
+    margin: 0 0 10px
+    &:hover
+      margin-bottom: 10px
+  .header
+    height: 50px
+    &__articles-found
+      display: none
+    &__toolbar
+      justify-content: flex-end
+    &__filter-btn
+      display: block
+      padding: 10px
+      margin-left: 10px
+  .filter-btn__icon
+    vertical-align: middle
+  .main
+    position: relative
+    display: block
+    &__sidebar
+      position: fixed
+      overflow-y: scroll
+      padding-top: 50px
+      display: block
+      width: 230px
+      height: 100%
+      top: 0
+      right: -100%
+      background: #fff
+      transition: right 0.4s
+      z-index: 99
+      box-shadow: -1px 0 5px rgba(0,0,0, 0.1)
+      padding-right: 0
+    &__content
+      padding: 0 10px 10px
+  .filter
+    &__item
+      padding-bottom: 20px
+      border-bottom: transparent
+    &__title
+      border-bottom: 1px solid #dcdcdd
+      margin-left: -20px
+      padding-left: 20px
+    &__wrap-controll
+      border: 0
+      border-bottom: 1px solid #dcdcdd
+      padding-right: 20px
+      &:hover
+        color: $font-color-root
+        border-color: #dcdcdd
+    &__controll
+      &:hover
+        color: $font-color-root
+    &__item-check
+      border-bottom: 1px solid #dcdcdd
+    &__label
+      padding: 10px 0
+      width: 100%
+      &:hover
+        color: inherit
+      &::before
+        border: 0
+        background: transparent
+    &__checkbox
+      &:checked + .filter__label
+        font-family: $font-root-bold
+        color: #666
+      &:checked + .filter__label::before
+        border: transparent
+        background: transparent
+    &__checkbox, .filter__label::before
+      left: auto
+      right: 20px
+  .shape-check
+    left: auto
+    right: 20px
+    fill: #666
+  .mob-menu
+    overflow: hidden
+    position: fixed
+    body
+      overflow: hidden
+      position: fixed
+    .main__sidebar
+      right: 0
+    .substrate
+      display: block
+    .header
+      transition: $transition
+      box-shadow: 0 1px 5px rgba(0,0,0, .2)
+    .shape-filter
+      display: none
+    .shape-close
+      display: block
+    .post-article
+      display: none
+  .catalog
+    margin-left: 0
+
+  .card
+    margin: 0 0 10px
+  .pagination
+    &__list
+      justify-content: center
+  .footer
+    flex-direction: column
+    text-align: center
+    margin-top: 20px
+    &__group
+      flex-direction: column
+      padding-left: 0
+      text-align: center
+    &__option
+      a
+        margin-right: 0
+        padding-bottom: 5px
+        display: block
+  .copyright
+    width: auto
+    padding-bottom: 5px

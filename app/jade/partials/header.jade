@@ -1,0 +1,21 @@
++b('header').header
+  +e('').left
+    +e('').logo
+      +b('').logo
+        +e('a')(href="#").link
+          +b('svg')(viewBox="0 0 20 20").shape-logo
+            use(xlink:href="#logo")
+  +e('').right
+    +e('').articles-found
+      +b('').articles-found
+        p Найдено <span>5 000<span> предложений
+    +e('').post-article
+      +b('').post-article
+        +e('a')(href="#").link Разместить предложение
+          +e('svg')(viewBox="0 0 20 20").icon.shape-add
+            use(xlink:href="#add")
+      +b('').filter-btn
+        +e('a')(href="#").link
+          +e('svg')(viewBox="0 0 20 20").icon.shape-filter
+            use(xlink:href="#filter")
+

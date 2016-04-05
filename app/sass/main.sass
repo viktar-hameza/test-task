@@ -1,0 +1,310 @@
+@import "fonts"
+@import "bourbon"
+@import "variables"
+
+html 
+  box-sizing: border-box
+
+*, *:before, *:after 
+  box-sizing: inherit
+
+*:focus
+    outline: none
+
+
+.clearfix:after
+  content: ""
+  display: table
+  clear:both
+
+.ulli 
+  margin: 0
+  padding: 0
+  list-style: none
+
+body
+  min-width: 320px
+  max-width: 1400px
+  margin: 0 auto
+  display: flex
+  flex-direction: column
+  height: 100vh
+  background-color: $color-main-bg
+  font: $font-size-root $font-root
+  color: $font-color-root
+  line-height: 1.4
+a
+  color: $links-color
+  transition: $transition
+  text-decoration: none
+a:hover
+  text-decoration: none
+  color: $color-hover
+
+b, strong
+  font-family: $font-root-bold
+  font-weight: normal
+
+h1, h2, h3, h4, h5, h6
+  font-weight: normal
+  font-family: $font-root-bold
+
+
+// -----------------------------------------------
+//   [Header]
+// -----------------------------------------------
+.header, .footer
+  flex-shrink: 0
+.header
+  display: flex
+  align-items: center
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  z-index: 100
+  padding: 0 20px
+  height: 60px
+  background-color: $color-main-bg
+  &--sticky
+    transition: $transition
+    box-shadow: 0 1px 5px rgba(0,0,0, .2)
+  &__wrap-logo
+    width: 190px
+  &__toolbar
+    flex: 1
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding-left: 20px
+  &__filter-btn
+    display: none
+.shape-close
+  display: none
+
+.logo
+  &__link
+    display: block
+    width: 118px
+.post-article
+  &__text
+  &__icon
+    vertical-align: middle
+    display: none
+
+// -----------------------------------------------
+//   [Main]
+// -----------------------------------------------
+.main
+  padding-top: 60px
+  display: flex
+  flex: 1 0 auto
+  &__sidebar
+    width: 210px
+    padding-right: 10px
+    padding-bottom: 20px
+    // padding-top: 20px
+  &__content
+    flex: 1
+    padding: 20px
+
+.filter
+  &__item
+    padding: 20px 0 20px 20px
+    border-bottom: 1px solid #dcdcdd
+  &__title
+    margin: 0
+    padding-bottom: 15px
+  &__wrap-controll
+    border: 1px solid #dcdcdd
+    border-radius: 2px
+    transition: $transition
+    &:hover
+      border-color: #ababac
+  &__controll
+    &:hover
+      color: $links-color
+      cursor: pointer
+    padding: 9px 11px
+    width: 100%
+    border: none
+    box-shadow: none
+    background-color: transparent
+    background-image: none
+    color: $font-color-root
+  &__list-check
+    @extend .ulli
+  &__item-check
+    display: flex
+    align-items: center
+    position: relative
+  &__checkbox
+    opacity: 0
+    &:checked ~ .shape-check
+      display: inline-block
+    &:checked + .filter__label::before
+      border: 1px solid #5b5b5b
+      background: #666666
+  &__checkbox, .filter__label::before
+    width: 20px
+    height: 20px
+    top: 50%
+    left: 0
+    margin-top: -10px
+    position: absolute
+    cursor: pointer
+  &__label
+    padding: 5px 0
+    padding-left: 30px
+    cursor: pointer
+    transition: $transition
+    &:hover
+      color: #333
+      &:before
+        border-color: #ababac
+    &::before
+      content: ''
+      border: 1px solid #dcdcdd
+      border-radius: 3px
+      background: transparent
+      transition: $transition
+.shape-check
+  position: absolute
+  width: 20px
+  height: 20px
+  top: 50%
+  margin-top: -10px
+  left: 0px
+  pointer-events: none
+  fill: #fff
+  display: none
+
+// --------------------
+//   [Main-content]
+// --------------------
+.catalog
+  display: flex
+  flex-wrap: wrap
+  margin-left: -20px
+  padding-bottom: 20px
+  &__item
+    flex: 0 1 (100%/3)
+.card
+  border-radius: 3px
+  background: #fff
+  box-shadow: 0px 1px 5px rgba(0,0,0, .1)
+  transition: all 0.2s ease
+  margin: 0 0 20px 20px
+  &:hover
+    box-shadow: 0px 3px 5px rgba(0,0,0, .2)
+    margin-top: -3px
+    margin-bottom: 23px
+  &__link
+    display: block
+    transition: none
+    &:hover .card__discription
+      color: #999
+  &__group
+    position: relative
+    display: block
+    margin: 0
+  &__img
+    display: block
+    width: 100%
+    border-radius: 3px 3px 0 0
+  &__price
+    position: absolute
+    bottom: 7px
+    left: 10px
+    font: 20px $font-root-bold
+    color: #fff
+    text-shadow: 0 1px 2px rgba(0,0,0, .5)
+  &__head-group
+    padding: 10px
+  &__title
+    font: $font-size-root $font-root
+    margin: 0
+    line-height: 1.4
+  &__discription
+    color: #999
+    line-height: 1.4
+  &__option
+    padding-left: 6px
+    &:first-child
+      padding-left: 0
+
+
+.pagination
+  &__list
+    @extend .ulli
+    display: flex
+    flex-wrap: wrap
+  &__item
+    a
+      display: block
+      width: 46px
+      height: 40px
+      text-align: center
+      line-height: 40px
+  &__item--active
+    border: 1px solid #dcdcdd
+    border-radius: 2px
+    a
+      color: #999
+// -----------------------------------------------
+//   [Footer]
+// -----------------------------------------------
+
+.footer
+  display: flex
+  margin-top: 40px
+  padding: 15px 20px
+  &__group
+    display: flex
+    flex: 1
+    justify-content: space-between
+    padding-left: 20px
+  &__option
+    a
+      display: inline-block
+      margin-right: 20px
+      &:last-child
+        // margin-right: 0
+.copyright
+  width: 190px
+
+
+.substrate
+  display: none
+  position: fixed
+  top: 0
+  height: 100%
+  width: 100%
+  background: rgba(245, 246, 247, 0.8)
+  z-index: 98
+  &-visible
+    display: block
+.svg-box
+  display: none
+.shape-logo
+  display: block
+  width: 118px
+  height: 19px
+.shape-add
+  width: 20px
+  height: 20px
+.shape-filter
+  width: 20px
+  height: 20px
+.shape-check
+  width: 20px
+  height: 20px
+.shape-close
+  width: 20px
+  height: 20px
+
+
+
+
+
+@import "media"
