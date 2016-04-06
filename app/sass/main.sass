@@ -5,11 +5,18 @@
 html 
   box-sizing: border-box
 
+figure
+  margin: 0
+
 *, *:before, *:after 
   box-sizing: inherit
 
+a, label
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important
+  -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important
+  outline: none !important
 *:focus
-    outline: none
+  outline: none
 
 
 .clearfix:after
@@ -21,18 +28,23 @@ html
   margin: 0
   padding: 0
   list-style: none
-
-body
-  min-width: 320px
-  max-width: 1400px
+.wrap
+  max-width: $max-width
   margin: 0 auto
   display: flex
   flex-direction: column
   height: 100vh
+body
+  min-width: 320px
+  // max-width: $max-width
+  // margin: 0 auto
+  
   background-color: $color-main-bg
   font: $font-size-root $font-root
   color: $font-color-root
   line-height: 1.4
+.hidden
+  display: none
 a
   color: $links-color
   transition: $transition
@@ -56,16 +68,20 @@ h1, h2, h3, h4, h5, h6
 .header, .footer
   flex-shrink: 0
 .header
-  display: flex
-  align-items: center
+  margin: 0 auto
   position: fixed
   top: 0
   left: 0
   right: 0
   z-index: 100
   padding: 0 20px
-  height: 60px
   background-color: $color-main-bg
+  &__inner
+    margin: 0 auto
+    max-width: $max-width
+    display: flex
+    align-items: center
+    height: 60px
   &--sticky
     transition: $transition
     box-shadow: 0 1px 5px rgba(0,0,0, .2)
@@ -77,10 +93,13 @@ h1, h2, h3, h4, h5, h6
     align-items: center
     justify-content: space-between
     padding-left: 20px
-  &__filter-btn
+  &__control-btn
     display: none
+    padding: 10px
+    margin-left: 10px
 .shape-close
-  display: none
+  &--hide
+    display: none
 
 .logo
   &__link
@@ -100,10 +119,10 @@ h1, h2, h3, h4, h5, h6
   display: flex
   flex: 1 0 auto
   &__sidebar
+    flex: 0 0 210px
     width: 210px
     padding-right: 10px
     padding-bottom: 20px
-    // padding-top: 20px
   &__content
     flex: 1
     padding: 20px
@@ -112,6 +131,8 @@ h1, h2, h3, h4, h5, h6
   &__item
     padding: 20px 0 20px 20px
     border-bottom: 1px solid #dcdcdd
+    &:last-child
+      border-bottom: 0
   &__title
     margin: 0
     padding-bottom: 15px
@@ -189,6 +210,7 @@ h1, h2, h3, h4, h5, h6
   padding-bottom: 20px
   &__item
     flex: 0 1 (100%/3)
+    width: (100%/3)
 .card
   border-radius: 3px
   background: #fff
@@ -222,12 +244,35 @@ h1, h2, h3, h4, h5, h6
   &__head-group
     padding: 10px
   &__title
-    font: $font-size-root $font-root
+    position: relative
     margin: 0
+    width: 100%
+    overflow: hidden
     line-height: 1.4
+    font: $font-size-root $font-root
+    white-space: nowrap
+    &::after
+      content: ''
+      position: absolute
+      right: 0
+      top: 0
+      width: 40px
+      height: 100%
+      background: linear-gradient(to right, rgba(255,255,255, 0.3), #fff 100%)
   &__discription
+    position: relative
     color: #999
     line-height: 1.4
+    white-space: nowrap
+    overflow: hidden
+    &::after
+      content: ''
+      position: absolute
+      right: 0
+      top: 0
+      width: 40px
+      height: 100%
+      background: linear-gradient(to right, rgba(255,255,255, 0.3), #fff 100%)
   &__option
     padding-left: 6px
     &:first-child
@@ -280,10 +325,20 @@ h1, h2, h3, h4, h5, h6
   top: 0
   height: 100%
   width: 100%
-  background: rgba(245, 246, 247, 0.8)
+  background: rgba(230, 230, 230, 0.8)
   z-index: 98
   &-visible
     display: block
+
+
+// @keyframes bounce
+//   0%
+//     transform: translateY(-2000px)
+//   100%
+//     transform: translateY(0)
+
+
+
 .svg-box
   display: none
 .shape-logo
@@ -302,8 +357,9 @@ h1, h2, h3, h4, h5, h6
 .shape-close
   width: 20px
   height: 20px
-
-
+.shape-phone
+  width: 20px
+  height: 20px
 
 
 

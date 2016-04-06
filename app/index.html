@@ -4,6 +4,8 @@
   <title>Recently Completed Projects</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="x-rim-auto-match" content="none">
   <!-- build:css css/vendor.min.css -->
   <!-- bower:css -->
   <link rel="stylesheet" href="bower_components/normalize-css/normalize.css" />
@@ -14,7 +16,9 @@
   <!-- endbuild -->
 </head>
 <body>
+  <div class="wrap">
   <header class="header">
+    <div class="header__inner">
       <div class="header__wrap-logo logo">
         <a href="#" class="logo__link">
           <svg viewBox="0 0 118 19" class="shape-logo">
@@ -35,15 +39,16 @@
         </svg>
       </a>
 
-      <span class="header__filter-btn filter-btn">
-        <svg viewBox="0 0 20 20" class="filter-btn__icon shape-filter">
+      <span class="header__control-btn control-btn">
+        <svg viewBox="0 0 20 20" class="control-btn__icon shape-filter">
           <use xlink:href="#filter"></use>
         </svg>
-        <svg viewBox="0 0 20 20" class="filter-btn__icon shape-close">
+        <svg viewBox="0 0 20 20" class="control-btn__icon shape-close shape-close--hide mob-popap-close">
           <use xlink:href="#close"></use>
         </svg>
       </span>
 
+    </div>
     </div>
   </header>
 
@@ -97,63 +102,145 @@
               </svg>
             </li>
             <li class="filter__item-check">
-              <input id="cb2" class="filter__checkbox" name="cb" type="checkbox">
-              <label for="cb2" class="filter__label">BMW</label>
+              <input id="cb3" class="filter__checkbox" name="cb" type="checkbox">
+              <label for="cb3" class="filter__label">Chevrolet</label>
               <svg viewBox="0 0 20 20" class="shape-check">
                 <use xlink:href="#shape-check"></use>
               </svg>
             </li>
             <li class="filter__item-check">
-              <input id="cb2" class="filter__checkbox" name="cb" type="checkbox">
-              <label for="cb2" class="filter__label">BMW</label>
+              <input id="cb4" class="filter__checkbox" name="cb" type="checkbox">
+              <label for="cb4" class="filter__label">Citroen</label>
               <svg viewBox="0 0 20 20" class="shape-check">
                 <use xlink:href="#shape-check"></use>
               </svg>
             </li>
             <li class="filter__item-check">
-              <input id="cb2" class="filter__checkbox" name="cb" type="checkbox">
-              <label for="cb2" class="filter__label">BMW</label>
+              <input id="cb5" class="filter__checkbox" name="cb" type="checkbox">
+              <label for="cb5" class="filter__label">Fiat</label>
               <svg viewBox="0 0 20 20" class="shape-check">
                 <use xlink:href="#shape-check"></use>
               </svg>
             </li>
             <li class="filter__item-check">
-              <input id="cb2" class="filter__checkbox" name="cb" type="checkbox">
-              <label for="cb2" class="filter__label">BMW</label>
+              <input id="cb6" class="filter__checkbox" name="cb" type="checkbox">
+              <label for="cb6" class="filter__label">Ford</label>
               <svg viewBox="0 0 20 20" class="shape-check">
                 <use xlink:href="#shape-check"></use>
               </svg>
             </li>
             <li class="filter__item-check">
-              <input id="cb2" class="filter__checkbox" name="cb" type="checkbox">
-              <label for="cb2" class="filter__label">BMW</label>
+              <input id="cb7" class="filter__checkbox" name="cb" type="checkbox">
+              <label for="cb7" class="filter__label">Honda</label>
               <svg viewBox="0 0 20 20" class="shape-check">
                 <use xlink:href="#shape-check"></use>
               </svg>
             </li>
             <li class="filter__item-check">
-              <input id="cb2" class="filter__checkbox" name="cb" type="checkbox">
-              <label for="cb2" class="filter__label">BMW</label>
+              <input id="cb8" class="filter__checkbox" name="cb" type="checkbox">
+              <label for="cb8" class="filter__label">Hyundai</label>
               <svg viewBox="0 0 20 20" class="shape-check">
                 <use xlink:href="#shape-check"></use>
               </svg>
             </li>
             <li class="filter__item-check">
-              <input id="cb2" class="filter__checkbox" name="cb" type="checkbox">
-              <label for="cb2" class="filter__label">BMW</label>
+              <input id="cb9" class="filter__checkbox" name="cb" type="checkbox">
+              <label for="cb9" class="filter__label">Infiniti</label>
               <svg viewBox="0 0 20 20" class="shape-check">
                 <use xlink:href="#shape-check"></use>
               </svg>
             </li>
             <li class="filter__item-check">
-              <input id="cb2" class="filter__checkbox" name="cb" type="checkbox">
-              <label for="cb2" class="filter__label">BMW</label>
+              <input id="cb10" class="filter__checkbox" name="cb" type="checkbox">
+              <label for="cb10" class="filter__label">Kia</label>
               <svg viewBox="0 0 20 20" class="shape-check">
                 <use xlink:href="#shape-check"></use>
               </svg>
             </li>
-
-
+            <li class="filter__item-check">
+              <input id="cb11" class="filter__checkbox" name="cb" type="checkbox">
+              <label for="cb11" class="filter__label">Land Rover</label>
+              <svg viewBox="0 0 20 20" class="shape-check">
+                <use xlink:href="#shape-check"></use>
+              </svg>
+            </li>
+            <li class="filter__item-check">
+              <input id="cb12" class="filter__checkbox" name="cb" type="checkbox">
+              <label for="cb12" class="filter__label">Lexus</label>
+              <svg viewBox="0 0 20 20" class="shape-check">
+                <use xlink:href="#shape-check"></use>
+              </svg>
+            </li>
+            <li class="filter__item-check">
+              <input id="cb13" class="filter__checkbox" name="cb" type="checkbox">
+              <label for="cb13" class="filter__label">Mazda</label>
+              <svg viewBox="0 0 20 20" class="shape-check">
+                <use xlink:href="#shape-check"></use>
+              </svg>
+            </li>
+            <li class="filter__item-check">
+              <input id="cb14" class="filter__checkbox" name="cb" type="checkbox">
+              <label for="cb14" class="filter__label">Mercedes-Benz</label>
+              <svg viewBox="0 0 20 20" class="shape-check">
+                <use xlink:href="#shape-check"></use>
+              </svg>
+            </li>
+            <li class="filter__item-check">
+              <input id="cb15" class="filter__checkbox" name="cb" type="checkbox">
+              <label for="cb15" class="filter__label">Mitsubishi</label>
+              <svg viewBox="0 0 20 20" class="shape-check">
+                <use xlink:href="#shape-check"></use>
+              </svg>
+            </li>
+            <li class="filter__item-check">
+              <input id="cb16" class="filter__checkbox" name="cb" type="checkbox">
+              <label for="cb16" class="filter__label">Nissan</label>
+              <svg viewBox="0 0 20 20" class="shape-check">
+                <use xlink:href="#shape-check"></use>
+              </svg>
+            </li>
+            <li class="filter__item-check">
+              <input id="cb17" class="filter__checkbox" name="cb" type="checkbox">
+              <label for="cb17" class="filter__label">Opel</label>
+              <svg viewBox="0 0 20 20" class="shape-check">
+                <use xlink:href="#shape-check"></use>
+              </svg>
+            </li>
+            <li class="filter__item-check">
+              <input id="cb18" class="filter__checkbox" name="cb" type="checkbox">
+              <label for="cb18" class="filter__label">Peugeot</label>
+              <svg viewBox="0 0 20 20" class="shape-check">
+                <use xlink:href="#shape-check"></use>
+              </svg>
+            </li>
+            <li class="filter__item-check">
+              <input id="cb19" class="filter__checkbox" name="cb" type="checkbox">
+              <label for="cb19" class="filter__label">Porsche</label>
+              <svg viewBox="0 0 20 20" class="shape-check">
+                <use xlink:href="#shape-check"></use>
+              </svg>
+            </li>
+            <li class="filter__item-check">
+              <input id="cb20" class="filter__checkbox" name="cb" type="checkbox">
+              <label for="cb20" class="filter__label">Renault</label>
+              <svg viewBox="0 0 20 20" class="shape-check">
+                <use xlink:href="#shape-check"></use>
+              </svg>
+            </li>
+            <li class="filter__item-check">
+              <input id="cb21" class="filter__checkbox" name="cb" type="checkbox">
+              <label for="cb21" class="filter__label">SEAT</label>
+              <svg viewBox="0 0 20 20" class="shape-check">
+                <use xlink:href="#shape-check"></use>
+              </svg>
+            </li>
+            <li class="filter__item-check">
+              <input id="cb22" class="filter__checkbox" name="cb" type="checkbox">
+              <label for="cb22" class="filter__label">Skoda</label>
+              <svg viewBox="0 0 20 20" class="shape-check">
+                <use xlink:href="#shape-check"></use>
+              </svg>
+            </li>
             
           </ul>
           </div>
@@ -171,7 +258,7 @@
                 <span class="card__price">39 500 <span class="card__currency">$</span></span>
               </figure>
               <div class="card__head-group">
-                <h3 class="card__title">Mercedes CLS350</h3>
+                <h3 class="card__title">Mercedes CLS350 Mercedes</h3>
                 <div class="card__discription">
                   <span class="card__option">2013</span>
                   <span class="card__option">47 000 <span>км</span></span>
@@ -278,11 +365,66 @@
 <h6>Ручеек, своего.</h6>
   <p>Далеко-далеко за словесными<strong>горами</strong> в <b>стране</b>, гласных и согласных живут рыбные тексты.
   Lorem ipsum dolor sit amet, consectetur <strong>adipisicing</strong> elit. Dicta dolore odit cum commodi sit et numquam quaerat, corporis nostrum quam, vel eaque reprehenderit eius officiis repellendus porro quod iusto enim!<a href="#">sdfsdf</a></p> -->
+</div>
 <div class="substrate"></div>
+
+<div class="popup">
+  <div class="popup__inner">
+    <figure class="popup__wrap-img">
+      <img class="popup__img" src="img/img_popup.png" alt="">
+    </figure>
+    <div class="popup__content">
+      <div class="popup__item main-param">
+        <h1 class="main-param__title">Alfa Romeo MiTo</h1>
+        <ul class="main-param__list">
+          <li class="main-param__item">2010 года выпуска</li>
+          <li class="main-param__item">Пробег 139 087 км</li>
+          <li class="main-param__item">Бензин 1.4 л</li>
+          <li class="main-param__item">Механика</li>
+          <li class="main-param__item">Передний привод</li>
+        </ul>
+        <div class="main-param__price"><span>9450</span> $</div>
+      </div>
+      <div class="popup__item option-param">
+        <ul class="option-param__list">
+          <li class="option-param__item">Кондиционер</li>
+          <li class="option-param__item option-param__item--none">Кожаный салон</li>
+          <li class="option-param__item">Легкосплавные диски</li>
+          <li class="option-param__item option-param__item--none">Ксенон</li>
+          <li class="option-param__item">Парктроник</li>
+          <li class="option-param__item">Подогрев сидений</li>
+          <li class="option-param__item">Система контроля стабилизации</li>
+          <li class="option-param__item">Навигация</li>
+          <li class="option-param__item option-param__item--none">Громкая связь</li>
+        </ul>
+      </div>
+      <div class="popup__item popup-discription">
+        <p>
+          Автомобиль для любителей быстрой, экстремальной езды, с экономичным расходом топлива, 6-ти мкп, три режима езды, 155 л.с, л\д R18, салон-карбон, дожим стекол, USB с поддержкой МП3, Блютуз, Круиз-контроль, двухзонный климат, парктроник, пригнана из Швейцарии, сервисные документы
+        </p>
+      </div>
+
+      <div class="popup__item p-phone">
+        <span class="p-phone__number">+375 (29) 123-45-67</span>
+        <svg viewBox="0 0 20 20" class="p-phone__icon shape-phone">
+          <use xlink:href="#phone"></use>
+        </svg>
+      </div>
+      <div class="popup__item p-name">
+        <span>Екатерина</span>
+      </div>
+
+    </div>
+    <svg viewBox="0 0 20 20" class="popup__shape-close shape-close">
+      <use xlink:href="#close"></use>
+    </svg>
+  </div>
+</div>
+
+
 <svg width="0" height="0" class="svg-box">
   <symbol id="add" viewBox="0 0 20 20"><title>add</title><path d="M10 9H3v1h7v7h1v-7h7V9h-7V2h-1v7z" fill="#666"/></symbol>
   <symbol id="shape-check" viewBox="0 0 20 20"><title>check</title><path d="M3 12.175L7.661 17 17 3.863 15.966 3 7.56 14.816l-3.712-3.741-.847 1.1"/></symbol>
-  <symbol id="check_white" viewBox="0 0 20 20"><title>check_white</title><path d="M3 12.175L7.661 17 17 3.863 15.966 3 7.56 14.816l-3.712-3.741-.847 1.1" fill="#FFF"/></symbol>
   <symbol id="close" viewBox="0 0 20 20"><title>close</title><path d="M10.607 8.9l-4.95-4.95-.707.707 4.95 4.95-4.95 4.95.707.706 4.95-4.95 4.95 4.95.706-.707-4.95-4.95 4.95-4.95-.707-.706-4.95 4.95z" fill="#666"/></symbol>
   <symbol id="down" viewBox="0 0 20 20"><title>down</title><path d="M6.628 8L6 8.628l4.443 4.443 4.443-4.443L14.257 8l-3.814 3.814L6.628 8z" fill="#666"/></symbol>
   <symbol id="filter" viewBox="0 0 20 20"><title>filter</title><path d="M0 4h3v1H0V4zm8 0h12v1H8V4zM0 14h3v1H0v-1zm8 0h12v1H8v-1zM0 9h12v1H0V9zm17 0h3v1h-3V9zM5.5 6a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm0 .9C4.12 6.9 3 5.803 3 4.45 3 3.097 4.12 2 5.5 2S8 3.097 8 4.45C8 5.803 6.88 6.9 5.5 6.9zm0 9.1a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm0 .9c-1.38 0-2.5-1.097-2.5-2.45C3 13.097 4.12 12 5.5 12S8 13.097 8 14.45c0 1.353-1.12 2.45-2.5 2.45zm9-5.9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm0 .9c-1.38 0-2.5-1.097-2.5-2.45C12 8.097 13.12 7 14.5 7S17 8.097 17 9.45c0 1.353-1.12 2.45-2.5 2.45z" fill="#666"/></symbol>
@@ -299,18 +441,58 @@
 <!-- endbuild -->
 <script>
   $(window).scroll(function () {
-    $header = $('.header')
-    if( $(window).scrollTop() >= 1 && !($header.hasClass('header--sticky'))){
-      $header.addClass('header--sticky');
+    $header = $(".header")
+    if( $(window).scrollTop() >= 1 && !($header.hasClass("header--sticky"))){
+      $header.addClass("header--sticky");
     } else if ($(window).scrollTop() <= 1){
-      $header.removeClass('header--sticky');
+      $header.removeClass("header--sticky");
     }
   });
-  $(".filter-btn").click(function(){
-    $("html").toggleClass("mob-menu");
+  $(".shape-filter").click(function(){
+    $("html").addClass("mob-menu");
+    return false;
+  });
+    $(".shape-close").click(function(){
+    $("html").removeClass("mob-menu");
     return false;
   });
 
+  var link = document.querySelector(".card__link");
+  var popup = document.querySelector(".popup");
+  var close = document.querySelector(".mob-popap-close");
+  var closeTwo = document.querySelector(".popup__shape-close");
+  var mobPopap = document.querySelector("html");
+
+  link.addEventListener("click", function(event) {
+    event.preventDefault();
+    mobPopap.classList.add("mob-popap");
+    popup.classList.add("popup--show");
+  });
+  close.addEventListener("click", function(event) {
+    event.preventDefault();
+    mobPopap.classList.remove("mob-popap");
+    popup.classList.remove("popup--show");
+  });
+  closeTwo.addEventListener("click", function(event) {
+    event.preventDefault();
+    mobPopap.classList.remove("mob-popap");
+    popup.classList.remove("popup--show");
+  })
+  window.addEventListener("keydown", function(event) {
+    if (event.keyCode === 27) {
+      if (popup.classList.contains("popup--show")) {
+        mobPopap.classList.remove("mob-popap");
+        popup.classList.remove("popup--show");
+      }
+    }
+  });
+  
+  popup.addEventListener("click", function(event) {
+    if (event.target.classList.contains("popup--show")) {
+        mobPopap.classList.remove("mob-popap");
+        popup.classList.remove("popup--show");
+    }
+  });
 </script>
 </body>
 </html>

@@ -1,8 +1,11 @@
+@import "bourbon"
+
 /* Small Devices, Tablets */
 @media only screen and (max-width : 1100px)
   .catalog
     &__item
       flex-basis: 50%
+      width: 50%
   .card
     &:hover
       margin-top: 0
@@ -17,22 +20,23 @@
   .catalog
     &__item
       flex-basis: 100%
+      width: 100%
 @media only screen and (max-width : 570px)
   .card
     margin: 0 0 10px
     &:hover
       margin-bottom: 10px
   .header
-    height: 50px
+    &__inner
+      height: 50px
     &__articles-found
       display: none
     &__toolbar
       justify-content: flex-end
-    &__filter-btn
+    &__control-btn
       display: block
-      padding: 10px
-      margin-left: 10px
-  .filter-btn__icon
+  .control-btn__icon
+    cursor: pointer
     vertical-align: middle
   .main
     position: relative
@@ -138,3 +142,188 @@
   .copyright
     width: auto
     padding-bottom: 5px
+
+@media only screen and (min-width : 220px)
+  .header
+    z-index: 201
+  .popup
+    position: absolute
+    top: 0
+    overflow-y: scroll
+    min-width: 100%
+    height: 100%
+    display: none
+    z-index: 200
+    background: rgba(230, 230, 230, 0.8)
+    line-height: 22px
+    color: #666
+    &--show
+      display: block
+      // animation: bounce 0.3s
+    &__inner
+      position: relative
+      width: 100%
+      // margin: 0 auto
+      margin-top: 50px
+      box-shadow: 0px 10px 20px rgba(0,0,0,.2)
+      background: #fff
+      border-radius: 3px
+    &__img
+      display: block
+      // border-radius: 3px 3px 0 0
+      width: 100%
+      height: 100%
+    &__content
+      padding: 20px
+    &__item
+      padding: 15px 0
+      border-bottom: 1px solid #e6e6e6
+      &:first-child
+        padding-top: 0
+      &:last-child
+        border-bottom: 0
+        padding-bottom: 0
+    &__shape-close
+      display: none
+      position: absolute
+      top: -40px
+      right: 0
+      cursor: pointer
+  .main-param
+    &__title
+      margin: 0
+      padding-bottom: 10px
+      font-family: $font-root-bold
+      font-size: 20px
+      color: $links-color
+    &__list
+      margin: 0
+      padding: 0
+      list-style: none
+    &__price
+      font: 20px $font-root-bold
+      padding: 5px 0
+      color: $links-color
+  .option-param
+    &__list
+      margin: 0
+      padding: 0
+      list-style: none
+    &__item--none
+      color: #afafaf
+      text-decoration: line-through
+  .popup-discription
+    p
+      margin: 0
+  .p-phone
+    position: relative
+    &__number
+      font: 20px $font-root-bold
+      vertical-align: middle
+      color: $links-color
+    &__icon
+      vertical-align: middle
+      position: absolute
+      right: 0
+      top: 50%
+      margin-top: -10px
+
+  .mob-popap
+    overflow: hidden
+    body
+      overflow: hidden
+    .post-article__icon
+      display: none
+    .control-btn__icon
+      display: none
+    .shape-close--hide
+      display: block
+    .header
+      transition: $transition
+      box-shadow: 0 1px 5px rgba(0,0,0, .2)
+    .control-btn
+      display: block
+    .header__articles-found
+      display: none
+
+
+@media only screen and (min-width : 750px)
+  .header
+    z-index: 190
+  .popup
+    &--show
+      // animation: bounce 0.3s
+    &__inner
+      width: 700px
+      margin: 50px auto
+      box-shadow: 0px 10px 20px rgba(0,0,0,.2)
+    &__img
+      display: block
+      border-radius: 3px 3px 0 0
+    &__shape-close
+      display: block
+    &__content
+      overflow: hidden
+    &__item
+      border-bottom: 0
+      &:first-child
+       padding-top: 10px
+  .main-param
+    float: left
+    width: 230px
+    &__title
+      // padding-top: 5px
+  .option-param
+    float: right
+    width: 430px
+    padding-top: 10px
+    border-left: 1px solid #dcdcdd
+    padding-left: 20px
+    &__list
+      columns: 2
+      column-gap: 50px
+  .popup-discription
+    float: right
+    width: 430px
+    padding-left: 20px
+    border-left: 1px solid #dcdcdd
+  .p-phone
+    width: 230px
+    float: left
+    padding-bottom: 0
+    padding-top: 7px
+    font-size: 14px
+    &__number
+      font: 14px $font-root
+      color: #666
+    &__icon
+      display: none
+  .p-name
+    width: 230px
+    float: left
+    padding-top: 0
+  .mob-popap
+    .post-article__icon
+      display: block
+    .control-btn__icon
+      display: none
+    .shape-close--hide
+      display: block
+    .shape-add
+      display: none
+    .header
+      transition: $transition
+      box-shadow: 0 0 0 0
+    .control-btn
+      display: none
+    .header__articles-found
+      display: block
+@media only screen and (min-width : 900px)
+  .popup
+    // max-width: $max-width
+    &__shape-close
+      position: absolute
+      top: 0
+      right: -40px
+      cursor: pointe
+// @media only screen and (min-width : 1100px)
