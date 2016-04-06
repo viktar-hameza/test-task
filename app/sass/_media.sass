@@ -1,15 +1,17 @@
 @import "bourbon"
 
-/* Small Devices, Tablets */
+
 @media only screen and (max-width : 1100px)
   .catalog
     &__item
-      flex-basis: 50%
+      // flex-basis: 50%
       width: 50%
   .card
     &:hover
       margin-top: 0
       margin-bottom: 20px
+
+
 @media only screen and (max-width : 750px)
   .post-article
     padding: 10px
@@ -19,7 +21,7 @@
       display: block
   .catalog
     &__item
-      flex-basis: 100%
+      // flex-basis: 100%
       width: 100%
 @media only screen and (max-width : 570px)
   .card
@@ -68,10 +70,12 @@
     &__wrap-controll
       border: 0
       border-bottom: 1px solid #dcdcdd
-      padding-right: 20px
+      // padding-right: 20px
       &:hover
         color: $font-color-root
         border-color: #dcdcdd
+    &__prefix
+      left: 0
     &__controll
       &:hover
         color: $font-color-root
@@ -88,7 +92,7 @@
     &__checkbox
       &:checked + .filter__label
         font-family: $font-root-bold
-        color: #666
+        color: $links-color
       &:checked + .filter__label::before
         border: transparent
         background: transparent
@@ -101,10 +105,8 @@
     fill: #666
   .mob-menu
     overflow: hidden
-    position: fixed
     body
       overflow: hidden
-      position: fixed
     .main__sidebar
       right: 0
     .substrate
@@ -142,6 +144,27 @@
   .copyright
     width: auto
     padding-bottom: 5px
+  .styledSelect
+    border: 0
+    padding: 0 20px
+    &:before
+      right: 22px
+    .active
+      // border-bottom: 0px solid #eee
+  .options
+    background: #F5F6F7
+    left: -20px
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1)
+    border-radius: 0
+    border: 0
+    border-bottom: 1px solid #dcdcdd
+    border-top: 1px solid #dcdcdc
+    li
+      // text-align: center
+      padding-left: 40px
+
+
+
 
 @media only screen and (min-width : 220px)
   .header
@@ -247,6 +270,8 @@
       display: none
 
 
+
+
 @media only screen and (min-width : 750px)
   .header
     z-index: 190
@@ -326,4 +351,3 @@
       top: 0
       right: -40px
       cursor: pointe
-// @media only screen and (min-width : 1100px)
